@@ -54,52 +54,14 @@
   <!--   autoplay> -->
   <!-- </lottie&#45;player> -->
 
-    <!-- Gambar PNG yang ingin dianimasikan -->
-  <img id="myImage" src="logo.png" alt="PNG Image" style="width:300px;">
+  <lottie-player              
+      src="https://assets7.lottiefiles.com/packages/lf20_x62chJ.json"  
+      background="transparent"           
+      speed="1"           
+      style="width: 300px; height: 300px;"           
+      loop           
+      autoplay>         
+  </lottie-player>
 
-  <script>
-    // Fungsi untuk melakukan fade out pada imej
-    function fadeOut() {
-      const img = document.getElementById('myImage');
-      let opacity = 1;
-
-      // Mengurangkan opacity secara berperingkat
-      const fadeInterval = setInterval(function() {
-        if (opacity <= 0) {
-          clearInterval(fadeInterval);
-        } else {
-          opacity -= 0.05; // Kurangkan opacity
-          img.style.opacity = opacity;
-        }
-      }, 50);
-    }
-
-    // Fungsi untuk melakukan fade in pada imej
-    function fadeIn() {
-      const img = document.getElementById('myImage');
-      let opacity = 0;
-
-      // Meningkatkan opacity secara berperingkat
-      const fadeInterval = setInterval(function() {
-        if (opacity >= 1) {
-          clearInterval(fadeInterval);
-        } else {
-          opacity += 0.05; // Tambah opacity
-          img.style.opacity = opacity;
-        }
-      }, 50);
-    }
-
-    // Fungsi untuk loop animasi fade out dan fade in
-    function loopFade() {
-      fadeOut();
-      setTimeout(function() {
-        fadeIn();
-      }, 2000); // Tunggu 2 saat (masa fade out selesai) sebelum fade in bermula
-    }
-
-    // Mulakan loop animasi
-    setInterval(loopFade, 4000); // Ulang setiap 4 saat
-  </script>
 </body>                                                                                           
 </html>
